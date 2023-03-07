@@ -6,7 +6,7 @@ import { ApiResponse, IApi } from "../../types";
 import {
   getImagesFetch,
   getImagesAxios,
-  requestApiFactory
+  requestApi
 } from "../../utils/imageRequests";
 import { Loading } from "../Loading";
 
@@ -19,7 +19,7 @@ interface IGridResults {
 export const GridLayout = ({ query, api, handleLoading }: IGridResults) => {
   const { data, isLoading, error, isError } = useQuery<ApiResponse>(
     [query, api],
-    () => requestApiFactory(api, query, getImagesFetch, getImagesAxios)
+    () => requestApi(api, query, getImagesFetch, getImagesAxios)
   );
 
   useEffect(() => handleLoading(isLoading), [isLoading, handleLoading]);

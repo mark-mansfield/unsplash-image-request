@@ -1,4 +1,4 @@
-import { IApi } from "../../types";
+import { IApi } from '../../types';
 
 interface IForm {
   handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
@@ -9,13 +9,8 @@ interface IForm {
 export const Form = ({ handleSubmit, isLoading, selected }: IForm) => {
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="form"
-        disabled={isLoading}
-        placeholder="Example: superman"
-      />
-      <select name="api" defaultValue={selected} value={selected}>
+      <input type="text" name="form" disabled={isLoading} placeholder="Example: superman" />
+      <select name="api" defaultValue={""}>
         <option label="use Fetch API" value="fetch"></option>
         <option label="use Axios" value="axios"></option>
       </select>
