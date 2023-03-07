@@ -16,6 +16,7 @@ specifiers:
   postcss-nesting: ^8.0.1
   react: 18.2.0
   react-access-router: 2.0.12
+  react-daisyui: 2.5.0
   react-dom: 18.2.0
   react-scripts: 5.0.1
   typescript: 4.4.2
@@ -36,6 +37,7 @@ dependencies:
   postcss-nesting: 8.0.1_postcss@8.4.21
   react: 18.2.0
   react-access-router: 2.0.12
+  react-daisyui: 2.5.0_react-dom@18.2.0+react@18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-scripts: 5.0.1_dbdc7dc6fe06864207159f08fe408fdc
 
@@ -8762,6 +8764,18 @@ packages:
       raf: 3.4.1
       regenerator-runtime: 0.13.11
       whatwg-fetch: 3.6.2
+    dev: false
+
+  /react-daisyui/2.5.0_react-dom@18.2.0+react@18.2.0:
+    resolution: {integrity: sha512-sQDcC56ASjQtSmETLME73HedqmRzhRnIMxV63Gd0aZsRXLJJpizNbQX9GzAXbP7A9eK+R9z9z4y3/vjCP1Q4JA==}
+    peerDependencies:
+      daisyui: ^2.42.1
+      react: '>=16'
+      react-dom: '>=16'
+      tailwindcss: ^3.0.23
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react-dev-utils/12.0.1_49ba94ccb1968cfbd04dc90607e86418:
