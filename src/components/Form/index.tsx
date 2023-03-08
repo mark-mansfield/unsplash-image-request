@@ -8,7 +8,7 @@ export const Form = ({ handleSubmit, isLoading, selected }: IForm) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="toolbar">
-         <Title text="Search Unsplash"/>
+        <Title text="Search Unsplash" />
         <div className="input-group">
           <Input
             type="text"
@@ -17,7 +17,7 @@ export const Form = ({ handleSubmit, isLoading, selected }: IForm) => {
             placeholder="Example: superman"
             className="input input-bordered"
           />
-          <select name="api" defaultValue={selected}>
+          <select name="api" defaultValue={selected} className="input-group__select">
             <option label="Fetch API" value="fetch"></option>
             <option label="Axios" value="axios"></option>
           </select>
