@@ -4,7 +4,7 @@ export const Toast = () => {
    <div className="toast">
   <div className="alert alert-info">
     <div>
-      <span>Your image has been copied to your clipboard</span>
+      <span>Image url copied</span>
     </div>
   </div>
 </div>

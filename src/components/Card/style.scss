@@ -1,13 +1,13 @@
 .card {
   display: flex;
   flex-direction: column;
-
+  border-radius: 0;
   &__image {
     object-fit: cover;
     height: 100%;
     width: 100%;
     max-width: 100%;
-    border-radius: 0.5rem;
+    border-radius: 0;
     vertical-align: top;
   }
 
@@ -18,7 +18,7 @@
     height: 100%;
     width: 100%;
     z-index: 10;
-    border-radius: 0.5rem;
+    border-radius: 0;
     border: 1px solid transparent;
     display: flex;
     flex-direction: column;
@@ -29,8 +29,17 @@
   }
 }
 .card:hover {
-    cursor:pointer;
+  cursor: pointer;
 }
 .card:hover .card__hidden {
   opacity: 1;
+}
+
+@media only screen and (min-width: 600px) {
+  .card {
+    &__image,
+    &__hidden {
+      border-radius: 0.5rem;
+    }
+  }
 }

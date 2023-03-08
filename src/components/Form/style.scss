@@ -1,17 +1,23 @@
 .toolbar {
-  width: 90%;
   position: fixed;
-  margin-top: 88vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 20px;
+
+  h1 {
+    display: none;
+  }
 
   .input-group {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    border-radius: 10px;
     width: 100%;
 
     &__select,
@@ -39,6 +45,13 @@
   .toolbar {
     position: relative;
     margin-top: 10%;
-    width: 50%;
+    width: 100%;
+    h1 {
+      display: block;
+    }
+    .input-group {
+      border-radius: 10px;
+      width: 100%;
+    }
   }
 }
