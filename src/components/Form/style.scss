@@ -1,0 +1,39 @@
+.toolbar {
+  width: 90%;
+  position: fixed;
+  margin-top: 88vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+
+  .input-group {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+
+    select {
+      color: #666666;
+    }
+
+    .btn {
+      svg {
+        transform: scale(0.9);
+      }
+    }
+
+    .input {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .toolbar {
+    position: relative;
+    margin-top: 10%;
+    width: 50%;
+  }
+}

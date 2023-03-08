@@ -19,4 +19,20 @@ export interface Urls {
   small_s3: string;
 }
 
-export type IApi = "fetch" | "axios";
+export type IApi = 'fetch' | 'axios';
+
+export interface IGridResults {
+  handleLoading: (e: boolean) => void;
+  query: string;
+  api: IApi;
+}
+
+export interface IForm {
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+  isLoading: boolean;
+  selected: IApi;
+}
+
+export interface ICard {
+  res: Result;
+}

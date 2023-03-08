@@ -1,20 +1,26 @@
-import { Result } from "../../types";
-
-interface ICard {
-  res: Result;
-}
-
+import { ICard } from '../../types';
+import  { useContext } from 'react';
+import { Button } from 'react-daisyui';
+import { copyText } from '../../utils/copyToClipboard';
+import './style.scss';
+import { AppContext } from '../../utils/context';
 export const Card = ({ res }: ICard) => {
+  const { urls, alt_description, description, likes } = res;
+
+  const { showFn } = useContext(AppContext);
+
+  const handleCopyToClipBoard = async (content: string) => {
+    copyText(content);
+    showFn();
+  };
+
   return (
-    <div>
-      <img
-        src={res.urls.small}
-        alt={res.alt_description || "photo"}
-        loading="lazy"
-      />
-      <div className="hidden">
-        <h4>{res.description}</h4>
-        <b>{res.likes}</b>
+    <div className="card" role="button" tabIndex={1}>
+      <img className="card__image" src={urls.small} alt={alt_description || 'photo'} loading="lazy" />
+      <div className="card__hidden">
+        <h4>{description}</h4>
+        <Button onClick={() => handleCopyToClipBoard(urls.small || '')}>copy url to clipbord</Button>
+        <b>{likes}</b>
       </div>
     </div>
   );

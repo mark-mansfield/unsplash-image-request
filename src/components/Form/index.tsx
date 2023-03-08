@@ -1,26 +1,25 @@
-import { IApi } from '../../types';
+import { IForm } from '../../types';
 import { Button, Input } from 'react-daisyui';
-interface IForm {
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  isLoading: boolean;
-  selected: IApi;
-}
+import {Title} from '../'
+import './style.scss'
 
 export const Form = ({ handleSubmit, isLoading, selected }: IForm) => {
+
   return (
     <form onSubmit={handleSubmit}>
-      <div className="ImagePreview__toolbar">
+      <div className="toolbar">
+         <Title text="Search Unsplash"/>
         <div className="input-group">
           <Input
             type="text"
-            name="form"
+            name="input"
             disabled={isLoading}
             placeholder="Example: superman"
             className="input input-bordered"
           />
-          <select name="api" defaultValue={''}>
-            <option label="use Fetch API" value="fetch"></option>
-            <option label="use Axios" value="axios"></option>
+          <select name="api" defaultValue={selected}>
+            <option label="Fetch API" value="fetch"></option>
+            <option label="Axios" value="axios"></option>
           </select>
           <Button className="btn btn-square" disabled={isLoading}>
             <svg

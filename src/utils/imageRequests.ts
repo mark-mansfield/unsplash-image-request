@@ -37,6 +37,7 @@ export const getImagesAxios = async (query: string): Promise<ApiResponse> => {
   }
 };
 
+
 export function requestApi(
   api: IApi,
   query: string,

@@ -12,13 +12,12 @@ export const useFormQuery = () => {
     const formData = new FormData(target);
 
     // @ts-ignore
-    //  missing Iterable error
-    // couldnt get my ts config set correctly to remove this
-    const { form, api } = Object.fromEntries(formData);
+    // missing Iterator error
+    const { input, api } = Object.fromEntries(formData);
 
-    if (form.toString().trim().length === 0) return;
+    if (input.toString().trim().length === 0) return;
 
-    setQuery(form.toString());
+    setQuery(input.toString());
     setApi(api.toString());
 
     target.reset();
